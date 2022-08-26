@@ -1,24 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+background-image:url(../src/assets/images/fondo.jpg);
+background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 
 .navBar{
   padding: 2rem;
   display: flex;
   justify-content: center;
-  background-color: #020623;
 }
 
 .nav{
@@ -26,11 +18,11 @@ code {
   align-items: center;
   justify-content: center;
   gap:3rem;
-  background: rgba(15, 15, 15, 0.062);
-  box-shadow: 0 8px 32px 0 rgba(167, 171, 218, 0.226);
-  backdrop-filter: blur( 5.5px );
-  border-radius: 30px;
-  padding: 1rem;
+  background: rgba(14, 13, 13, 0.082);
+  box-shadow: 0 8px 32px 0 rgba(150, 55, 173, 0.37);
+  backdrop-filter: blur( 2px );
+  border-radius: 10px;
+ 
 }
 
 .nav-item img{
@@ -48,4 +40,30 @@ code {
   background-color: white;
   border-radius: 20px;
 
+}
+
+.jam{
+  font-size: 2rem;
+  color:white;
+  position: relative;
+  top:30px;
+  right:150px;
+}
+
+.contador{
+  text-align: center;
+  position: relative;
+  right: 110px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.listContainer{
+  color:white;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid black;
+  padding: 1rem;
 }

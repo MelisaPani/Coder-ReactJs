@@ -1,11 +1,13 @@
-import Header from './componentes/Header';
+import ItemListContainer from './componentes/ItemListContainer';
+import NavBar from './componentes/NavBar';
 import './estilos.css';
 
 function App() {
   return (
     <div>
-      <Header/>
-      <hr/>
+      <NavBar/>
+
+      <ItemListContainer gretting= "Proximamente stock 🚀.... "/>
     </div>
 
   );

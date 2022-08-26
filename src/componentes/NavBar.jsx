@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "./images/logogalaxy2.png"
+import CartWidget from "./CartWidget";
+import logo from "../assets/images/logogalaxy2.png"
 
-const Header =() =>{
+const NavBar =() =>{
     return(
     <div className="navBar"> 
         <ul className="nav">
@@ -22,8 +23,9 @@ const Header =() =>{
         </li>
         </ul>
 
+        <CartWidget/> 
     </div>
     )
 }
 
-export default Header;
+export default NavBar;
