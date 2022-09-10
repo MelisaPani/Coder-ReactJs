@@ -1,11 +1,26 @@
 body {
   margin: 0;
   padding: 0;
-background-image:url(../src/assets/images/fondo.jpg);
-background-size: cover;
+  background-image:url(../src/assets/images/fondo.jpg);
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+.listContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+/* -----------------CartWidget---------------- */
 
 .navBar{
   padding: 2rem;
@@ -42,7 +57,7 @@ background-size: cover;
 
 }
 
-.jam{
+.jam-shopping-cart{
   font-size: 2rem;
   color:white;
   position: relative;
@@ -55,6 +70,8 @@ background-size: cover;
   margin-bottom: 2rem;
 }
 
+/* -------------itemCount---------------- */
+
 .contador{
   text-align: center;
   position: relative;
@@ -65,35 +82,24 @@ background-size: cover;
   padding: 4px;
 }
 
-.listContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:white;
-  width: 100%;
-  height: 100vh;
-  padding: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
 
-}
 
 .counter{
   text-align: center;
-  background: rgba( 255, 255, 255, 0.1 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  background: rgba(20, 20, 20, 0.13);
+  box-shadow: 0 8px 32px 0 rgba(15, 15, 15, 0.527);
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   padding: 2rem;
-  width: 200px;
+  width: 300px;
  
 }
 
 .controles{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 .controles button{
@@ -103,12 +109,21 @@ background-size: cover;
   height: 30px;
   width: 30px;
   border-radius: 60%;
+  border: 2px solid #faf6fa;
+  
+}
+
+.controles button:hover{
+  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 2px solid #faf6fa;
 }
 
 .addToCart{
   font-size: 15px;
   padding: 5px;
 }
+
+/* -------------------item------------------ */
 
 .item-container{
   display: flex;
@@ -139,7 +154,12 @@ background-size: cover;
 
  .item-img img{
   width: 180px;
+  filter: drop-shadow(15px 5px 2px rgba(14, 13, 13, 0.651));
+  transition: 0.3s all ease-in-out;
  }
+
+.item-img:hover{
+  transform: scale(1.1);}
 
  .buttonItem{
   width: 200px;
@@ -205,3 +225,91 @@ background-size: cover;
 .itemTitle h3{
   font-size: 18px;
 }
+
+/* -------------item list container----------- */
+
+.itemDetail{
+  width: 100%;
+  padding: 3rem;
+  border:1px solid white;
+}
+
+
+/* -----------------item detail---------------- */
+
+.item-containerDetail{
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  gap: 6rem;
+ 
+}
+
+.item-imgDetail{
+display: flex;
+flex-direction: column;
+gap:2rem;
+}
+
+.item-imgDetail img{
+  width: 300px;
+}
+
+.descripcion{
+  color:white;
+  max-width: 350px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.itemTitleDetail{
+margin-top: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+ }
+
+.itemTitleDetail h2{
+  font-size: 25px;
+  font-size: bolder;
+ 
+}
+.itemTitleDetail h3{
+  font-size: 20px;
+}
+.buttonItemDetail{
+  width: 200px;
+}
+
+.jam-thunder{
+  font-size: 20px;
+  color:#F7F701;
+}
+
+.buttonItemDetail{
+  padding: 10px;
+  width: 200px;
+  background-color: transparent;
+  border:2px solid white;
+  border-radius: 4px;
+  transition: all .40s ease-in-out;
+  color:white; 
+  backdrop-filter: blur( 10px );
+ 
+  
+}
+.buttonItemDetail:hover{
+  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 2px solid #faf6fa;
+}
+
+.cantidad{
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.imgRecicle img{
+  margin-top: 50px;
+}
+
