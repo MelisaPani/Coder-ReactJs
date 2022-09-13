@@ -1,34 +1,30 @@
 import React,{useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
-import { products } from "../utils/products"
+import { products } from "../utils/products";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailCointener =() => {
 const [item, setItem] =useState({});
-useEffect(() => {
-    const getProduct = () =>
-    new Promise((res, rej) => {
-        setTimeout(() => {
-        const product = products.find((prod) => prod.id === 1);
-             res(product);
-        }, 2000); 
-        
-        });
+const {itemId} = useParams();
 
-    getProduct()
-        .then((data) => {
-            setItem(data);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-}, []);
+useEffect(() =>{
+    const getProduct = new Promise(resolve =>{
+        setTimeout(() =>{
+            resolve (products);
+        },100);
+    });
+
+    getProduct.then(res => setItem(res.find(product =>product.id === parseInt(itemId))));
+},[itemId]);
+
+
 
 
     return(
 
         <div className="itemDetail">
-        <ItemDetail item={item}/>
+            <ItemDetail item={item}/>
         </div>
     )
 }

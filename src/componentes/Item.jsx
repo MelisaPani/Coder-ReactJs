@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Item = ({Item}) =>{
     return (
     
-        <div className="item-container" >
+        <div className="item-container" data-aos="fade-up">
             <div className="item-img">
                 <img src= {Item.img} alt={Item.title}/>
             </div>
@@ -12,7 +13,7 @@ const Item = ({Item}) =>{
                 <h3>${Item.price}</h3>
             </div>
             <div className="verDetalle">
-                <button className="buttonItem">Ver detalle</button>
+                <Link to={`/item/${Item.id}`} className="buttonItem">Ver detalle</Link>
             </div>
             <div className="stockDispo">
                 <p>Stock disponible: {Item.stock}</p>

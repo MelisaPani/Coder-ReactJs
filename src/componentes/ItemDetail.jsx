@@ -8,7 +8,7 @@ import ItemCount from "./itemCount";
     } 
     return (
 
-    <div className="item-containerDetail" >
+    <div className="item-containerDetail " data-aos="fade-up">
         <div className="item-imgDetail">
             <img src= {item.img} alt={item.title}/>
             <p className="descripcion"> {item.descripcion}</p>
@@ -20,7 +20,6 @@ import ItemCount from "./itemCount";
                 <span className="jam jam-thunder">ENVIOS A TODO EL PAÍS</span>           
                 <p className="cantidad">Cantidad: {item.stock} </p> 
                  <ItemCount initial={1} stock={item.stock}  onAdd={onAdd}  /> 
-                {/*  <button className="buttonItemDetail">Add to Cart</button>   */}
         </div>      
     </div>
     

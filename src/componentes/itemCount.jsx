@@ -19,7 +19,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
     return(
         <div className="counter">
-         {/*    <p> Moon Lamp</p> */}
+       
             <div className="controles">
             <button  disabled= {count <=1} onClick={decrease}>-</button>
             <p>{count}</p>

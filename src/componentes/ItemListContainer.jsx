@@ -1,47 +1,32 @@
 import React, {useEffect, useState}from "react";
-/* import ItemCount from "./itemCount"; */
-import ItemDetailCointener from "./ItemDetailContainer";
 import ItemList from "./ItemList";
-import { products } from "../utils/products"
+import { products } from "../utils/products";
+import { useParams } from "react-router-dom";
 
 
-const ItemListContainer =({gretting}) =>{
+const ItemListContainer =() =>{
     const [items, setItems] = useState([]);
-    useEffect(() => {
-      const getProducts = () =>
-          new Promise((res, rej) => {
-              setTimeout(() => {              
-                  res(products);
-              }, 2000);
-          });
 
-      getProducts()
-          .then((data) => {
-              setItems(data);
-          })
-          .catch((error) => {
-              console.log(error);
-          });
-  }, []);
+    const{ categoriaId } = useParams ()
+
+    useEffect(() =>{
+        const getItems = new Promise (resolve => {
+            setTimeout(() =>{
+                resolve(products);
+            },200);
+        });
+        if(categoriaId){
+            getItems.then(res => setItems(res.filter (Astronautas => Astronautas.category === categoriaId)));
+            }else {
+                getItems.then(res => setItems(res))
+            }
+       
+    },[categoriaId])
 
  
-
-
-/*      const onAdd = (quantity) =>{
-        console.log(`Agregaste ${quantity} unidades al carrito`)
-    } */
-
-
     return(
         <div className="listContainer">
-            <div className="ejercicios">
-           {/*  <h1>{gretting}</h1> */}
-        {/*     <ItemCount initial={1} stock={5} onAdd={onAdd} /> */}
-            </div>
-            <ItemList items={items}/> 
-           
-            <ItemDetailCointener/>
-           
+            <ItemList items={items}/>         
         </div>
     )
 }
