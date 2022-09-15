@@ -349,6 +349,72 @@ justify-content: space-evenly;
   margin-top: 50px;
 }
 
+.agregado{
+  text-align: center;
+  padding: 2rem;
+}
+
+.agregado p{
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.compra{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+
+}
+.finalizarCompra{
+  position: relative;
+}
+
+.finalizarCompra button{
+  font-weight: bolder;
+  letter-spacing: 2px;
+  background-color: greenyellow;
+  border:1px solid white;
+  color:black;
+  padding: 15px;
+  width: 100%;
+}
+
+.finalizarCompra button:hover{
+  box-shadow: 0 0 10px 0 #edf1f1 inset, 0 0 20px 2px #e5e9e8;
+}
+
+.seguirComprando button{
+  background-color: transparent;
+  border:1px solid white;
+  color:rgb(255, 255, 255);
+  padding: 15px;
+  width: 100%; 
+  color:white;
+  font-weight: bolder;
+  letter-spacing: 2px;
+ 
+}
+
+.seguirComprando button:hover{
+  box-shadow: 0 0 10px 0 #edf1f1 inset, 0 0 20px 2px #e5e9e8;
+}
+
+.jam-arrow-square-left-f{
+  margin-right: 30px;
+  font-size: 20px;
+ }
+
+.jam-arrow-square-right-f{
+  margin-left: 30px;
+  font-size: 20px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+
+
+
 /* ------------About---------------- */
 
 .containerAbout{
@@ -431,3 +497,12 @@ justify-content: space-evenly;
   background: rgba(14, 13, 13, 0.637);
   backdrop-filter: blur( 2px );
 }
+
+
+/* -------------cart---------------------- */
+
+.cart{
+  color:white;
+  margin-top: 20rem;
+}
+
