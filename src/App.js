@@ -7,23 +7,26 @@ import About from './componentes/About';
 import Contacto from './componentes/Contacto';
 import Footer from './componentes/footer';
 import Cart from './componentes/Cart';
+import { CartProvider } from './context/CartContext'; 
 
 
 function App() {
   return (
     <div>
-  <BrowserRouter>
-      <NavBar/>
-    <Routes>
-      <Route path ="/" element={ <ItemListContainer/>}/>
-      <Route path ="/contacto" element={ <Contacto/>}/>
-      <Route path ="/categoria/:categoriaId" element={ <ItemListContainer/>}/>
-      <Route path ="/item/:itemId" element={ <ItemDetailContainer/>}/>
-      <Route path ="/about" element={ <About/>}/>
-      <Route path ="/cart" element={ <Cart/>}/>
-    </Routes>
-    <Footer/>
-  </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+          <NavBar/>
+        <Routes>
+          <Route path ="/" element={ <ItemListContainer/>}/>
+          <Route path ="/contacto" element={ <Contacto/>}/>
+          <Route path ="/categoria/:categoriaId" element={ <ItemListContainer/>}/>
+          <Route path ="/item/:itemId" element={ <ItemDetailContainer/>}/>
+          <Route path ="/about" element={ <About/>}/>
+          <Route path ="/cart" element={ <Cart/>}/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
+  </CartProvider>
     </div>
 
   );
