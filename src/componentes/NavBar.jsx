@@ -25,6 +25,7 @@ const NavBar =() =>{
             <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item navItem" to="/categoria/Astronautas">Astronautas</NavLink></li>
                 <li><NavLink className="dropdown-item navItem" to="/categoria/Planets">Planets</NavLink></li>
+                <li><NavLink className="dropdown-item navItem" to="/categoria/all">All</NavLink></li>
             </ul>
         </div>
     </ul>

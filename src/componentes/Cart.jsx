@@ -2,9 +2,10 @@ import React from "react";
 import { Link} from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import ItemCart from "./ItemCart";
+import planets from "../assets/images/planet3.png"
 
 const Cart = () =>{
-    const { cart, totalPrice} = useCartContext();
+    const { cart, totalPrice, clearCart} = useCartContext();
 
     if (cart.length === 0){
     return (
@@ -17,11 +18,24 @@ const Cart = () =>{
     
     return(
 
-        <div className="cart">
+        <div className="cart" data-aos="fade-up">
+            <img className="cartplanets" src={planets} alt="planets" />
+            <div className="cartMap">
+                <p className="uCart"> Tu Carrito</p> 
+           
             {
                 cart.map(product => <ItemCart key={product.id} product={product} />)
             }
-            <p> Total: {totalPrice()}</p>
+             <span className="jam jam-trash" onClick={(clearCart)}> Vaciar carrito</span>
+            </div>
+
+            <div className="checkout">
+            <p className="shipping"> ENVIO GRATIS!</p>
+            <p className="totalCompra"> Total de tu compra: ${totalPrice()}</p>
+            <button className="finCompra"> GO TO CHECKOUT</button>
+            </div>
+            
+           
         </div>
     )
 }
