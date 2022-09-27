@@ -540,14 +540,6 @@ justify-content: space-evenly;
 
 }
 
-/* ------------contacto---------------- */
-
-.contacto{
-  color:white;
-  margin-top: 10rem;
-  padding: 2rem;
-  margin-bottom: 40%;}
-
 /* --------------footer---------------- */
 
 .footer{
@@ -593,7 +585,7 @@ justify-content: space-evenly;
   position: absolute;
   width: 450px;
   height: 300px;
-  right: 20%;
+  right: 10%;
   top: 40%;
 
 }
@@ -710,4 +702,104 @@ justify-content: space-evenly;
 .jam-trash:hover{
   transform: scale(1.1);
   color:rgb(214, 200, 200);
+}
+
+
+/* ----------------Contacto---------------- */
+
+.contacto{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 3rem;
+}
+
+.contenido__top{
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.contenido__top p{
+  margin-bottom: 3rem;
+}
+
+.contenido__top h2{
+  margin-bottom: 3rem;
+  letter-spacing: 5px;
+}
+
+.formsContacto label{
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.formsContacto input{
+  width: 450px;
+  padding: 14px;
+  border-radius: 5px;
+  background: rgb(243, 240, 240);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.637);
+  backdrop-filter: blur( 15.5px );
+  border: 1px solid rgba(15, 15, 15, 0.18);
+  margin-bottom: 3rem;
+}
+
+.formsContacto select{
+  width: 450px;
+  margin-bottom: 3rem;
+  padding: 14px;
+  border-radius: 5px;
+  background: rgb(243, 240, 240);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.637);
+  backdrop-filter: blur( 15.5px );
+  border: 1px solid rgba(15, 15, 15, 0.18);
+}
+
+.comentario{
+  width: 450px;
+  height: 300px;
+  padding: 10px;
+}
+
+.submitButton{   
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  margin-top: 3rem;
+  padding: 10px;
+  width: 200px;
+  background-color: transparent;
+  border:2px solid white;
+  border-radius: 4px;
+  transition: all .40s ease-in-out;
+  color:white; 
+  backdrop-filter: blur( 0px );
+  margin-bottom: 100px;
+  position: relative;
+
+}
+
+.submitButton:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 2px solid #faf6fa;
+
+}
+
+.contactoRocket img{
+  width: 300px;
+  position: absolute;
+  left: 100px;
+  top:40%;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate{
+  0%, 100% {
+      transform: translateY(50px);
+  }
+  50%{
+      transform: translateY(100px);
+  }
+
 }

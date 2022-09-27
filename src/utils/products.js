@@ -1,4 +1,4 @@
- export const products = 
+/*  export const products = 
 [
     {id: 1, img: "https://i.postimg.cc/D0Y6KRsp/product1.png", title: "Astronaut Hurra", stock:20, price: 600,descripcion: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sequi quis alias maxime error itaque!.", category:"Astronautas",},
 
@@ -23,4 +23,4 @@
 
 
 
-    ] 
+    ]  */

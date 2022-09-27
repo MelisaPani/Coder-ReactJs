@@ -1,32 +1,40 @@
 import React, {useEffect, useState}from "react";
 import ItemList from "./ItemList";
-import { products } from "../utils/products";
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 import { useParams } from "react-router-dom";
 
 
 const ItemListContainer =() =>{
     const [items, setItems] = useState([]);
+    const{ categoriaId } = useParams ();
 
-    const{ categoriaId } = useParams ()
 
-    useEffect(() =>{
-        const getItems = new Promise (resolve => {
-            setTimeout(() =>{
-                resolve(products);
-            },200);
-        });
-        if(categoriaId){
-            getItems.then(res => setItems(res.filter (Astronautas => Astronautas.category === categoriaId)));
-            }else {
-                getItems.then(res => setItems(res))
+
+    useEffect(() => {
+      
+            const querydb = getFirestore();
+            const quereyCollection = collection (querydb, "products");
+           
+           
+            if (categoriaId){
+                const queryFilter = query (quereyCollection, where ("category", "==", categoriaId))
+                getDocs(queryFilter)
+                .then (res => setItems( res.docs.map(product => ({id: product.id, ...product.data() }))));
+               
+            } else {
+                getDocs(quereyCollection)
+                .then (res => setItems( res.docs.map(product => ({id: product.id, ...product.data() }
+                )))); 
+              
             }
-       
-    },[categoriaId])
+               
+    }, [categoriaId,])
+   
 
  
     return(
         <div className="listContainer">
-            <ItemList items={items}/>         
+            <ItemList items={items}/>    
         </div>
     )
 }
