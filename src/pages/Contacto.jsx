@@ -15,18 +15,18 @@ const Contacto =() =>{
 
             <form className="formsContacto" >
 
-                <label class="d-block" for="username">Nombre y Apellido:</label>       
-                <input class="d-block" type="text" id="username" name="nombre" placeholder="Cual es tu nombre?" required></input>
+                <label className="d-block">Nombre y Apellido:</label>       
+                <input className="d-block" type="text" placeholder="Cual es tu nombre?" required></input>
 
-                <label for="email" className="d-block">Correo electronico:</label>     
-                <input name= "email" type="email" className="form-control" id="floatingInput" placeholder="name@example.com" required></input>
+                <label className="d-block">Correo electronico:</label>     
+                <input name= "email" type="email" className="form-control" placeholder="name@example.com" required></input>
 
-                <input type="text" name="subject" placeholder="Asunto a tratar..." title="El Asunto es requerido" required></input>
+                <input type="text" placeholder="Asunto a tratar..." title="El Asunto es requerido" required></input>
                 
-                <textarea name= "message"class="comentario form-control" placeholder="Escribe tu consulta" id="floatingTextarea" required></textarea>   
+                <textarea name= "message"className="comentario form-control" placeholder="Escribe tu consulta" required></textarea>   
                 
             
-                <button id= "FormButton" class= "submitButton" type="submit"> Enviar </button> 
+                <button className= "submitButton" type="submit"> Enviar </button> 
 
             </form>
         

@@ -32,7 +32,7 @@ const Cart = () =>{
             <div className="checkout">
             <p className="shipping"> ENVIO GRATIS!</p>
             <p className="totalCompra"> Total de tu compra: ${totalPrice()}</p>
-            <button className="finCompra"> GO TO CHECKOUT</button>
+            <Link to="/checkout"><button className="finCompra"> GO TO CHECKOUT</button></Link>
             </div>
             
            

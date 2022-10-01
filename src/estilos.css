@@ -803,3 +803,179 @@ justify-content: space-evenly;
   }
 
 }
+
+/* ---------FORM--------- */
+
+.formCheck{
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.pedidoCheck{
+  display: flex;
+  align-items: center;
+}
+
+.confirmaTuCompra{
+  color: #21e7e7;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 5rem;
+ 
+}
+
+.pedidoCheck form{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.pedidoCheck input{
+  width: 400px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.pedidoCheck button{
+  width: 400px;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+  background-color: transparent;
+  border:2px solid white;
+}
+
+.pedidoCheck button:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 2px solid #faf6fa;
+
+}
+
+.resumenCompra{
+  width: 500px;
+  color: white;
+  margin-left: 10rem;
+  font-size: 18px;
+  padding: 2rem;
+  background: rgba( 0, 0, 0, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba(18, 18, 19, 0.61);
+  backdrop-filter: blur( 12.5px );
+  border-radius: 30px;
+  
+}
+
+.detalle{
+  text-align: center;
+  font-weight: bolder;
+}
+
+.formCart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkoutTotal{
+  border-top:1px solid white;
+  font-size: 20px;
+  margin-top: 2rem;
+  text-align: center; 
+}
+
+.imgCheckout{
+  width: 50px;
+  height: 55px;
+  border:1px solid rgba(255, 255, 255, 0.658);
+  border-radius: 20%;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+/* --------Success--------- */
+.graciasCompra{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  height: 100vh;
+}
+
+.pagoOk img{
+width: 400px;
+animation: animate 5s linear infinite;
+}
+@keyframes animate{
+  0%, 100% {
+      transform: translateY(20px);
+  }
+  50%{
+      transform: translateY(40px);
+  }
+
+}
+
+.pagoOk p{
+  text-align: center;
+  color:white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: lighter;
+
+}
+
+.seguimiento{
+  font-size: 25px;
+  color: white;
+
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur( 5px );
+}
+
+.irHome{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  width: 200px;
+}
+
+.irHome:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 1px solid #faf6fa;
+
+}
+
+.speech-bubble {
+text-align: center;
+  width: 300px;
+	position: relative;
+	background: transparent;
+	border-radius: .5em;
+  padding: 15px;
+  box-shadow: 2px 2px 7px #bebebebb,
+    -2px -2px 7px #ffffffb7;
+    border: 2px solid white;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	margin-left: -5px;
+	margin-bottom: -19px;
+}
