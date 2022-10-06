@@ -1,4 +1,5 @@
 import React, {  useState, useContext, useEffect} from "react";
+import Swal from 'sweetalert2';
 export const CartContext =React.createContext([])
 
 export const useCartContext = () => useContext(CartContext);
@@ -17,11 +18,30 @@ export const CartProvider =({ children })=>{
     }, [cart])
     
 
-    const clearCart =() => setCart([]);
+    const clearCart =() => {setCart([]);}
 
     const isInCart =(id) => cart.find (product => product.id === id) ? true : false;
 
-    const removeProduct =(id) => setCart (cart.filter (product => product.id !== id));
+    const removeProduct =(id) => {
+        setCart (cart.filter (product => product.id !== id));
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })        
+            Toast.fire({
+            iconColor:'##F61513',
+            color:'white',
+            background:'black',
+            icon: 'error',
+            title: 'Product Deleted'
+            })}
 
     const addProduct =(item, quantity) =>{
         let newCart;
@@ -36,7 +56,7 @@ export const CartProvider =({ children })=>{
         setCart(newCart)
     }
 
-    console.log(`carrito:`, cart)
+   /*  console.log(`carrito:`, cart) */
 
     const totalPrice =() =>{
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);

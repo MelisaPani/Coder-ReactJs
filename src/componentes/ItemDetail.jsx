@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./itemCount";
 import { useCartContext } from "../context/CartContext";
+import Swal from 'sweetalert2'
 
 
  const ItemDetail =({item}) =>{
@@ -10,8 +11,26 @@ import { useCartContext } from "../context/CartContext";
  const {addProduct} = useCartContext();
 
      const onAdd = (quantity) =>{
-        setAdd(!add)
-        /*   console.log(`agregaste ${quantity}`) */
+        setAdd(!add);
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            iconColor:'#0FF74D',
+            color:'white',
+            background:'black',
+            icon: 'success',
+            title: 'Producto Agregado'
+          });
         addProduct (item,quantity)
     } 
 

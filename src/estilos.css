@@ -7,11 +7,10 @@ body {
   background-attachment: fixed;
 }
 
-
 /* -----------------Home----------------- */
 
 .presentacion{
-  margin-top: 7rem;
+ margin-top: 7rem;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -29,16 +28,29 @@ body {
   letter-spacing: 5px;
 }
 
-
 .intro{
- letter-spacing: 3px;
-  color: rgb(0, 197, 247);
+ letter-spacing: 5px;
   font-weight: bold;
   font-size: 60px;
   opacity: 1;
   left: 10%;
   top:20%;
   margin-top: 6rem;
+  background: radial-gradient(circle, #00C5F7 0%, #ee18dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: animatedGradient 2s infinite ease;
+  animation-direction: alternate;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  filter: drop-shadow(15px 5px 2px rgba(14, 13, 13, 0.74));
+}@keyframes animatedGradient {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 250%;
+  }
 }
 
 .planet{
@@ -77,7 +89,6 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 5rem;
-
 }
 
 /* -----------------NavBar---------------- */
@@ -102,24 +113,18 @@ body {
   backdrop-filter: blur( 20px );
   border-radius: 10px;
   padding: 10px;
- 
 }
-
 .nav-item img{
   width: 50px;
   object-fit: cover;
 }
-
 .nav-link{
-  color:white;
-  
+  color:white; 
 }
-
 .nav-link:hover{
   color:black;
   background-color: white;
   border-radius: 20px;
-
 }
 
 .dropdown-toggle{
@@ -138,7 +143,6 @@ body {
   background: rgba(12, 12, 12, 0.568);
   border: 1px solid white;
 }
-
 .dropdown-item{
   width: 300px;
   padding: 10px;
@@ -146,8 +150,7 @@ body {
   margin-right: 10px;
   color:white;
   text-decoration: none;
-  backdrop-filter: blur( 20px );
-  
+  backdrop-filter: blur( 20px ); 
 }
 .dropdown-item:hover{
   background-color: #f6f8f8d2;
@@ -158,8 +161,6 @@ body {
 .navItem{
   text-decoration: none;
 }
-
-
 
 
 /* ----------------cartWidget--------------------- */
@@ -177,8 +178,6 @@ body {
   text-decoration: none;
 }
 
-
-
 /* -------------itemCount---------------- */
 
 .contador{
@@ -193,18 +192,16 @@ body {
   font-size: 12px;
 }
 
-
-
 .counter{
   text-align: center;
-  background: rgba(20, 20, 20, 0.13);
-  box-shadow: 0 8px 32px 0 rgba(15, 15, 15, 0.527);
+  background: rgba(189, 183, 183, 0);
+  box-shadow: 0 8px 32px 0 rgba(15, 15, 15, 0.733);
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   padding: 2rem;
   width: 300px;
- 
+  margin-left:1.5rem ;
 }
 
 .controles{
@@ -220,8 +217,7 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 60%;
-  border: 2px solid #faf6fa;
-  
+  border: 2px solid #faf6fa; 
 }
 
 .controles button:hover{
@@ -242,7 +238,7 @@ body {
   justify-content:space-evenly;
   align-items: center;
   text-align: center;
-  border: 0.5px solid rgba(3, 3, 3, 0.178);
+  border: 0.5px solid rgba(3, 3, 3, 0.11);
   padding: 2rem;
   width: 300px;
   height: 600px;
@@ -251,10 +247,8 @@ body {
   border-radius: 25px;
   margin-bottom: 10px;
   background: rgba(59, 57, 57, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(219, 207, 207, 0.541);
+  box-shadow: 0 8px 32px 0 rgba(250, 252, 253, 0.199);
   backdrop-filter: blur( 4px );
-
-
  }
 
  .item-img {
@@ -265,8 +259,8 @@ body {
 
  .item-img img{
   width: 180px;
-  filter: drop-shadow(15px 5px 2px rgba(14, 13, 13, 0.651));
-  transition: 0.3s all ease-in-out;
+  filter: drop-shadow(15px 5px 2px rgba(14, 13, 13, 0.651));}
+  .item-img{transition: 0.7s all ease-in-out;
  }
 
 .item-img:hover{
@@ -291,7 +285,6 @@ body {
  .buttonItem:hover{
   color: black;
   border: transparent;
- 
  }
 
  .buttonItem:before {
@@ -309,7 +302,6 @@ body {
   opacity: 0;
   transition: opacity .3s ease-in-out;
   border-radius: 20px;
-
 }
 
 @keyframes glowing {
@@ -318,12 +310,10 @@ body {
   100% { background-position: 0 0; }
 }
 
-
 .buttonItem:hover:before {
   opacity: 1;
  
 } 
-
 
 .stockDispo{
   border-top: 1px solid white;
@@ -346,7 +336,6 @@ body {
 
 }
 
-
 /* -----------------item detail---------------- */
 
 .item-containerDetail{
@@ -358,11 +347,10 @@ body {
   margin-top: 8rem;
  }
  
-
 .item-imgDetail{
-display: flex;
-flex-direction: column;
-gap:2rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
 }
 
 .item-imgDetail img{
@@ -377,17 +365,20 @@ gap:2rem;
 }
 
 .itemTitleDetail{
-margin-top: 1rem;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-
- }
+  background: rgba(65, 63, 63, 0.137);
+  box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.719);
+  backdrop-filter: blur( 3px );
+  border-radius: 40px;
+  border: 0.5px solid rgba(14, 13, 13, 0.199);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .itemTitleDetail h2{
   font-size: 25px;
-  font-size: bolder;
- 
+  font-size: bolder; 
 }
 .itemTitleDetail h3{
   font-size: 20px;
@@ -406,10 +397,9 @@ justify-content: space-evenly;
   border-radius: 4px;
   transition: all .40s ease-in-out;
   color:white; 
-  backdrop-filter: blur( 10px );
- 
-  
+  backdrop-filter: blur( 10px );  
 }
+
 .buttonItemDetail:hover{
   box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
   border: 2px solid #faf6fa;
@@ -438,8 +428,8 @@ justify-content: space-evenly;
   display: flex;
   flex-direction: column;
   gap: 2rem; 
-
 }
+
 .finalizarCompra{
   position: relative;
 }
@@ -467,7 +457,6 @@ justify-content: space-evenly;
   color:white;
   font-weight: bolder;
   letter-spacing: 2px;
- 
 }
 
 .seguirComprando button:hover{
@@ -486,9 +475,6 @@ justify-content: space-evenly;
   top: 18px;
   right: 20px;
 }
-
-
-
 
 /* ------------About---------------- */
 
@@ -509,19 +495,17 @@ justify-content: space-evenly;
 
 .introAbout p{
   margin-top: 3rem;
-
 }
+
 .detalleAbout{
   color: white;
   display: flex;
   gap: 3rem;
   margin-top: 10rem;
- 
 }
 
 .detalleAbout h4{
  color:#E073F5
- 
 }
 
 .impresionAbout{
@@ -546,8 +530,8 @@ justify-content: space-evenly;
   color: white;
   margin-top: 8rem;
   width: 100%;
-  
-}
+ }
+
 .redes{
   border-bottom: 1px solid white;
   background: rgba(14, 13, 13, 0.842);
@@ -557,7 +541,6 @@ justify-content: space-evenly;
   flex-direction: row;
   justify-content: center;
   gap:1rem;
-  
 }
 
 .copyright{
@@ -566,7 +549,6 @@ justify-content: space-evenly;
   background: rgba(14, 13, 13, 0.637);
   backdrop-filter: blur( 2px );
 }
-
 
 /* -------------cart---------------------- */
 
@@ -578,7 +560,7 @@ justify-content: space-evenly;
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  
+  flex-wrap: wrap;
 }
 
 .cartplanets{
@@ -587,9 +569,7 @@ justify-content: space-evenly;
   height: 300px;
   right: 10%;
   top: 40%;
-
 }
-
 
 .cartEmpty{
   width: 100%;
@@ -598,7 +578,6 @@ justify-content: space-evenly;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .cartEmpty p{
@@ -607,13 +586,13 @@ justify-content: space-evenly;
   font-weight: bold;
   letter-spacing: 10px;
 }
+
 .goShopping{
   width: 200px;
   height: 50px;
   background-color: transparent;
   border: 1px solid white;
   color: white;
-
 }
 
 .goShopping:hover{
@@ -636,34 +615,33 @@ justify-content: space-evenly;
 }
 .cartDetail{
   flex-direction: row;
-
 }
 
 .uCart{
   font-size: 30px;
   border-bottom: 1px solid white;
-  width: 300px;
-  
+  width: 300px; 
 }
+
 .jam-trash-f{
   font-size: 18px;
   margin-bottom: 15px;
   color:red;
   cursor: pointer;
 }
+
 .checkout{
   display: flex;
   align-items: center;
   flex-direction: column; 
   padding: 3rem;
-  gap: 3rem;
+  gap: 2rem;
   width: auto;
-  background: rgba(17, 17, 17, 0.116);
+  background: rgba(212, 55, 212, 0.116);
   border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(10, 10, 10, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(10, 10, 10, 0.705);
   backdrop-filter: blur( 3px );
-  height: 400px;
-
+  height: 350px;
 }
 .shipping{
   font-size: 20px;
@@ -675,8 +653,7 @@ justify-content: space-evenly;
 .totalCompra{
   font-size: 30px;
   font-weight: bold;
-  border-bottom: 4px double white;
- 
+  border-bottom: 4px double white; 
 }
 
 .finCompra{
@@ -704,16 +681,14 @@ justify-content: space-evenly;
   color:rgb(214, 200, 200);
 }
 
-
 /* ----------------Contacto---------------- */
 
 .contacto{
-
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .contenido__top{
@@ -723,12 +698,14 @@ justify-content: space-evenly;
 }
 
 .contenido__top p{
-  margin-bottom: 3rem;
+ font-size: 18px;
 }
 
 .contenido__top h2{
   margin-bottom: 3rem;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .formsContacto label{
@@ -770,7 +747,7 @@ justify-content: space-evenly;
  align-items: center;
   margin-top: 3rem;
   padding: 10px;
-  width: 200px;
+  width: 450px;
   background-color: transparent;
   border:2px solid white;
   border-radius: 4px;
@@ -779,12 +756,10 @@ justify-content: space-evenly;
   backdrop-filter: blur( 0px );
   margin-bottom: 100px;
   position: relative;
-
 }
 
 .submitButton:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
   border: 2px solid #faf6fa;
-
 }
 
 .contactoRocket img{
@@ -824,15 +799,13 @@ justify-content: space-evenly;
   font-size: 3rem;
   letter-spacing: 3px;
   margin-bottom: 5rem;
- 
-}
+ }
 
 .pedidoCheck form{
   color: white;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
 }
 
 .pedidoCheck input{
@@ -842,7 +815,6 @@ justify-content: space-evenly;
   color: white;
   padding: 10px;
   cursor: pointer;
-
 }
 
 .pedidoCheck button{
@@ -856,7 +828,6 @@ justify-content: space-evenly;
 
 .pedidoCheck button:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
   border: 2px solid #faf6fa;
-
 }
 
 .resumenCompra{
@@ -869,7 +840,6 @@ justify-content: space-evenly;
   box-shadow: 0 8px 32px 0 rgba(18, 18, 19, 0.61);
   backdrop-filter: blur( 12.5px );
   border-radius: 30px;
-  
 }
 
 .detalle{
@@ -900,6 +870,7 @@ justify-content: space-evenly;
 }
 
 /* --------Success--------- */
+
 .graciasCompra{
   display: flex;
   flex-direction: column;
@@ -920,7 +891,6 @@ animation: animate 5s linear infinite;
   50%{
       transform: translateY(40px);
   }
-
 }
 
 .pagoOk p{
@@ -929,13 +899,11 @@ animation: animate 5s linear infinite;
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: lighter;
-
 }
 
 .seguimiento{
   font-size: 25px;
   color: white;
-
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur( 5px );
@@ -951,7 +919,6 @@ animation: animate 5s linear infinite;
 
 .irHome:hover{ box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
   border: 1px solid #faf6fa;
-
 }
 
 .speech-bubble {
@@ -978,4 +945,48 @@ text-align: center;
 	border-bottom: 0;
 	margin-left: -5px;
 	margin-bottom: -19px;
+}
+
+/* ----------error404--------- */
+
+.error404{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  height: 80vh;
+  color: rgba(255, 255, 255, 0.692);
+  font-family: monospace;
+  padding: 3rem;
+}
+.errorN{
+  font-size: 20rem;
+  letter-spacing: 20px;
+  font-weight: bold;
+}
+
+.errorBody{
+display: flex;
+flex-direction: column;
+gap: 4rem;
+text-align: center;
+}
+.houston{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.error404 button{
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  padding: 10px;
+  width: 200px;
+}
+.errorImg{
+  width: 600px;
+  filter: drop-shadow(15px 5px 2px rgba(14, 13, 13, 0.651));
+}
+.bodyImg{
+  align-self: flex-end;
 }

@@ -13,9 +13,8 @@ const Checkout =() =>{
     }
 
     if(orderId){
-        return(
-            
-            <div className="graciasCompra" > 
+        return (            
+            <div className="graciasCompra"> 
                 <div className="pagoOk">
                     <p className="speech-bubble" >Gracias por tu compra !!</p>
                     <img src={pagoOk} alt="pago aceptado" />

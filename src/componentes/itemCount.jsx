@@ -6,12 +6,10 @@ const ItemCount = ({initial, stock, onAdd}) => {
     const [count,setCount] =useState(parseInt(initial));
 
     const decrease = () =>{
-        /* setCount(count - 1); */
         count > 0 && setCount(count-1)
     }
 
     const increase = () =>{
-       /*  setCount(count + 1); */
        count <= stock && setCount(count+1)
     }
 

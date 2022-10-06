@@ -10,6 +10,7 @@ import Cart from './componentes/Cart';
 import { CartProvider } from './context/CartContext'; 
 import Home from './pages/Home/Home';
 import Checkout from './componentes/Checkout';
+import Error404 from './componentes/Error404';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path ="/about" element={ <About/>}/>
           <Route path ="/cart" element={ <Cart/>}/>
           <Route path ="/checkout" element={ <Checkout/> }/>
+          <Route path ="*" element={ <Error404/> }/>
         </Routes>
         <Footer/>
       </BrowserRouter>

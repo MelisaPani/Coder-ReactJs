@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import { useCartContext } from "../context/CartContext";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import Swal from 'sweetalert2';
 
 
 const Form =({handleId}) =>{
@@ -16,6 +17,17 @@ const Form =({handleId}) =>{
         const items =[];
         cart.forEach((item) =>{
             items.push({id:item.id, title:item.title, price:item.price, quantity: item.quantity});
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                iconColor: '#A8F72E',
+                title: 'Tu orden fue enviada',
+                text:'Procesando pago',
+                showConfirmButton: false,
+                timer: 1000,
+                background:'url(https://images.unsplash.com/photo-1608178398319-48f814d0750c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80)',
+                color:'white',
+              })
         });
 
         const order = {buyer:buyer,date:new Date(), items:items,total:totalPrice()}
