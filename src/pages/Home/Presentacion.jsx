@@ -8,7 +8,7 @@ const Presentacion = () =>{
         <div className="presentacion">
 
         <h1 className="intro">IMPRESIONES 3D</h1>
-        <p className="introP">Conoce nuestro Productos</p>
+        <p className="introP">Conoce Nuestros Productos</p>
         <img className="planet" src={planeta} alt="planet" />
         <img className="astrolego" src={lego} alt="astrolego" />
 

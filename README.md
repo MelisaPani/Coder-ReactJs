@@ -35,16 +35,23 @@ Correr el servidor:
 
 ### `npm start`
 
-Se abre una pestaña del navegador en el puerto 3000:
+Se abre una pestaña del navegador en el puerto 3000
 
 ### Sino copiar esta URL y pegarla en el navegador: `http://localhost:3000`
 
-## Estructura
 
-![estructura](https://i.postimg.cc/XNd4vbV1/estructura.png)
 
 ## ScreenShots
 
-![image01](https://i.postimg.cc/BnQ0NP2R/pint1.png)
-![image02](https://i.postimg.cc/pXBvDJ5D/print2.png)
-![image03](https://i.postimg.cc/j20Th8hh/print3.png)
+![image01](https://i.postimg.cc/L8LPPxYs/cap1.png)
+![image02](https://i.postimg.cc/s23MhsCn/cap2.png)
+![image03](https://i.postimg.cc/W33t583g/cap3.png)
+![image04](https://i.postimg.cc/fWSYZWzX/cap4.png)
+![image05](https://i.postimg.cc/7Z92Xf9v/cap5.png)
+![image06](https://i.postimg.cc/vHzTwCVf/cap6.png)
+
+
+## VIDEO
+Hacé click [ACA](https://imgur.com/a/ti0K5Mj) para ver un video de demostración del proceso de compra de la app.
+
+[ACA](https://imgur.com/a/HtPAi9K) para ver un video de demostración de EmailJs React.

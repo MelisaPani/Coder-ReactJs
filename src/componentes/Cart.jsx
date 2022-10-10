@@ -30,7 +30,7 @@ const Cart = () =>{
             </div>
 
             <div className="checkout">
-            <p className="shipping"> ENVIO GRATIS!</p>
+            <p className="shipping"><span className="jam jam-bus-f"></span> Envio gratis a todo el pais</p>
             <p className="totalCompra"> Total de tu compra: ${totalPrice()}</p>
             <Link to="/checkout"><button className="finCompra"> GO TO CHECKOUT</button></Link>
             </div>

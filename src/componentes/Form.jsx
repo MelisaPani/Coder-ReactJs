@@ -4,15 +4,16 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import Swal from 'sweetalert2';
 
 
+
 const Form =({handleId}) =>{
     const {cart, totalPrice,clearCart} =  useCartContext();
     const [nombre, setNombre] = useState ("");
     const [email, setEmail] = useState ("");
     const [telefono, setTelofono] = useState ("");
 
-
     const sendOrder =() =>{
-        if((nombre !== "") && (email !== "") && (telefono!=="")){
+        if((nombre.length > 4) && (email !== "" && email.includes("@")) && (telefono.length > 6 && telefono > 0)){
+            
         const buyer = {name:nombre, email:email, phone:telefono};
         const items =[];
         cart.forEach((item) =>{
@@ -22,7 +23,6 @@ const Form =({handleId}) =>{
                 icon: 'success',
                 iconColor: '#A8F72E',
                 title: 'Tu orden fue enviada',
-                text:'Procesando pago',
                 showConfirmButton: false,
                 timer: 1000,
                 background:'url(https://images.unsplash.com/photo-1608178398319-48f814d0750c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80)',
@@ -41,6 +41,17 @@ const Form =({handleId}) =>{
         
        });
 
+    } else {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            iconColor: '#FF0303',
+            title: 'Oops...',
+            text:'Por favor controla los datos ingresados',
+            showConfirmButton: true,
+            background:'#56095F',
+            color:'white',
+          })
     }
 
     }
@@ -48,9 +59,14 @@ const Form =({handleId}) =>{
        
         <div className="pedidoCheck">
             <form >
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre" onChange={(e) =>setNombre(e.target.value)} required/>
-            <input type="email" placeholder="Ingrea tu Email" id="email"  onChange={(e) =>setEmail(e.target.value)} required/>
-            <input type="number" placeholder="Ingrea tu telefono"  onChange={(e) =>setTelofono(e.target.value)} required/>
+            <label> Nombre:</label>
+            <input type="text" name="nombre" placeholder="minimo 4 digitos" onChange={(e) =>setNombre(e.target.value)} required/>
+
+            <label> Email: </label>
+            <input type="email" placeholder="name@example.com" id="email"  onChange={(e) =>setEmail(e.target.value)} required/>
+
+            <label> Telefono de contacto: </label>
+            <input type="number" placeholder="Ingresa tu telefono sin prefijo"  onChange={(e) =>setTelofono(e.target.value)} required/>
             <button  type="button" onClick={() => sendOrder()}> Generar Orden</button>
             </form>
 

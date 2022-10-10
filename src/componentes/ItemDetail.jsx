@@ -47,8 +47,6 @@ return (
                 <h2>{item.title}</h2>
                 <h3>${item.price}</h3>
                 <span className="jam jam-thunder">ENVIOS GRATIS A TODO EL PAÍS</span>           
-                <p className="cantidad">Cantidad: {item.stock} </p> 
-
                 {
                     add ?
                 <div className="agregado"> 
